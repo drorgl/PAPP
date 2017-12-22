@@ -1,0 +1,43 @@
+{
+  "name": "papp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "start-dev": "nodemon --watch *.ts --watch src/*.ts --watch src/**/*.ts --watch data/*.ts --exec ts-node src/index.ts",
+    "build": "tsc",
+    "tslint": "tslint -c tslint.json './*.ts' './src/**/*.ts'",
+    "test": "mocha -r ts-node/register tests/*.ts --exit"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/bunyan": "^1.8.4",
+    "@types/csv-parse": "^1.1.11",
+    "@types/koa": "^2.0.43",
+    "@types/koa-json": "^2.0.18",
+    "@types/koa-router": "^7.0.27",
+    "@types/mocha": "^2.2.44",
+    "@types/mongodb": "^2.2.18",
+    "@types/node": "^8.5.2",
+    "bunyan": "^1.8.12",
+    "chai": "^4.1.2",
+    "csv-parse": "^2.0.0",
+    "koa": "^2.4.1",
+    "koa-json": "^2.0.2",
+    "koa-router": "^7.3.0",
+    "mocha": "^4.0.1",
+    "mongo-in-memory": "0.0.5",
+    "mongodb": "^3.0.0-rc0",
+    "nodemon": "^1.14.1",
+    "odata-v4-mongodb": "^0.1.12",
+    "supertest-koa-agent": "^0.3.0",
+    "ts-node": "^3.3.0",
+    "tslint": "^5.8.0",
+    "typescript": "^2.6.2"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.0.10"
+  }
+}
